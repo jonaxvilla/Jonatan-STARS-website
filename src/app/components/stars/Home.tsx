@@ -2,7 +2,6 @@ import image_684f383cb1a32af335831193660950adedf4ef88 from '@/assets/684f383cb1a
 import image_24fb3b67abce387a0124d0ae76b0e9fe68cd7bb2 from '@/assets/24fb3b67abce387a0124d0ae76b0e9fe68cd7bb2.png';
 import image_2ed60adbcc0232bc5f8b573c2285104abe64643e from '@/assets/2ed60adbcc0232bc5f8b573c2285104abe64643e.png';
 import image_da82f1f904dae8dd9aad31ee10da63c29d8a5937 from '@/assets/da82f1f904dae8dd9aad31ee10da63c29d8a5937.png';
-
 import React from 'react';
 import { ArrowRight, Map, ShieldAlert, GraduationCap, Calendar, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -34,7 +33,7 @@ export function Home({ onNavigate }: HomeProps) {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900 text-white">
         <div className="absolute inset-0 z-0">
@@ -136,7 +135,7 @@ export function Home({ onNavigate }: HomeProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-teal-100 rounded-3xl -z-10 transform translate-x-8 -translate-y-8" />
               <div className="absolute bottom-0 left-0 w-2/3 h-2/3 bg-orange-100 rounded-3xl -z-10 transform -translate-x-6 translate-y-6" />

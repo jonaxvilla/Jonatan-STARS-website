@@ -3,6 +3,7 @@ import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, MapPin } from
 import { motion, AnimatePresence } from 'motion/react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import starsLogo from '@/assets/c5c4217966ccd203a12edf1e6f2fac93e291c0f9.png';
+import euFundedLogo from '@/assets//f08632102c51b8d0c1ad6afa45580429ce5be9f5.png';
 
 interface LayoutProps {
   children: ReactNode;
@@ -134,15 +135,12 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             
             {/* European Sponsor */}
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-blue-700 flex items-center justify-center rounded-sm">
-                 {/* Simplified EU Flag representation */}
-                 <span className="text-yellow-400 font-bold text-xs">EU</span>
-              </div>
-              <div className="text-sm">
-                <p className="font-semibold text-white">Co-funded by the</p>
-                <p>European Union</p>
-              </div>
+            <div className="flex justify-center md:justify-start">
+              <img 
+                src={euFundedLogo} 
+                alt="Co-funded by the European Union" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
 
             {/* Acknowledgement */}
@@ -156,10 +154,24 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
 
             {/* Social Media */}
             <div className="flex justify-center md:justify-end space-x-6">
-              <a href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="hover:text-white transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-white transition-colors"><Youtube size={20} /></a>
+              <a 
+                href="https://www.linkedin.com/company/stars-erasmusplus" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a 
+                href="https://www.instagram.com/stars_erasmus_international" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
           
