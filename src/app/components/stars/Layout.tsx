@@ -2,7 +2,7 @@ import React, { ReactNode, useState } from 'react';
 import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
-import starsLogo from 'figma:asset/c5c4217966ccd203a12edf1e6f2fac93e291c0f9.png';
+import starsLogo from '@/assets/c5c4217966ccd203a12edf1e6f2fac93e291c0f9.png';
 
 interface LayoutProps {
   children: ReactNode;
